@@ -3,6 +3,22 @@
         <h2 class="panel-title">{{ convertToDate({ dt: weatherDay.dt}) | date: dateFormat }}</h2>
     </div>
     <div class="panel-body">
-        {{ convertToStandard({ daytimeTemp: weatherDay.main.temp}) }}
+        <div class="col-xs-12 col-sm-6 cold-md-6">
+            <div class="thumbnail">
+                <img src="http://openweathermap.org/img/w/{{weatherDay.weather[0].icon}}.png" alt="{{weatherDay.weather[0].main}}">
+                <div class="caption">
+                    <h3 class="text-center">{{ weatherDay.weather[0].description }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 cold-md-6">
+            <div class="row">
+                <p><span>Current temperature:</span> {{ convertToStandard({ daytimeTemp: weatherDay.main.temp}) }} <sup>º</sup>C</p>
+                <p><span>Max temperature:</span> {{ convertToStandard({ daytimeTemp: weatherDay.main.temp_max}) }} <sup>º</sup>C</p>
+                <p><span>Min temperature:</span> {{ convertToStandard({ daytimeTemp: weatherDay.main.temp_min}) }} <sup>º</sup>C</p>
+                <p><span>Pressure:</span> {{ weatherDay.main.pressure }} hp</p>
+                <p><span>Humidity:</span> {{ weatherDay.main.humidity }}%</p>
+            </div>
+        </div>
     </div>
 </div>

@@ -1,7 +1,6 @@
-<a href="#" class="btn btn-info btn-lg active" role="button">Back to search</a>
-<h1>Forecast for {{city}}</h1>
+<h2>Forecast for {{city}}</h2>
 <hr />
-Days: <a href="#!/forecast/1" title="View today" ng-class="{'bg-primary': days === '1'}">1</a> | <a href="#!/forecast/7" ng-class="{'bg-primary': days === '7'}" title="View next seven days">7</a>
+<p>Forecast of the next ones: <a href="#!/forecast/1" title="View today" ng-class="{'selected_day': days === '1'}">1</a> | <a href="#!/forecast/7" ng-class="{'selected_day': days === '7'}" title="View next seven days">7</a></p>
 <hr />
 <div ng-repeat="w in weatherResult.list">
     <div class="row">
