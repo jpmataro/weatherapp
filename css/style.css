@@ -1,0 +1,12 @@
+body {
+    padding-top:85px;
+}
+.selected_day {
+    background-color: #222;
+    color: #FFFFFF;
+    padding: 4px 10px;
+    border-radius: 26px;
+}
+.selected_day:hover {
+    color: #FFFFFF;
+}
